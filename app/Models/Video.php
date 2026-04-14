@@ -8,6 +8,8 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Video extends Model
 {
+    protected $fillable = ['title', 'url', 'channel_id'];
+    
     public function channel(): BelongsTo
     {
         return $this->belongsTo(Channel::class);
